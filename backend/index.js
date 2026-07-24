@@ -9,7 +9,6 @@ const faqRoute = require("./routes/faq");
 
 const app = express();
 
-const cors = require("cors");
 
 app.use(
   cors({
