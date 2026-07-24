@@ -1,8 +1,8 @@
-const FAQ = require("../models/FAQ");
+const Faq = require("../models/Faq");
 
 exports.getFaq = async (req, res) => {
   try {
-    const faq = await FAQ.find();
+    const faq = await Faq.find();
 
     res.status(200).json({
       success: true,

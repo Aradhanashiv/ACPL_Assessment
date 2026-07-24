@@ -17,4 +17,4 @@ const faqSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("FAQ", faqSchema);
+module.exports = mongoose.model("Faq", faqSchema);
