@@ -1,12 +1,12 @@
-const FAQ = require("../models/FAQ");
+const Service = require("../models/Service");
 
-exports.getFaq = async (req, res) => {
+exports.getServices = async (req, res) => {
   try {
-    const faq = await FAQ.find();
+    const services = await Service.find();
 
     res.status(200).json({
       success: true,
-      data: faq,
+      data: services,
     });
   } catch (err) {
     res.status(500).json({

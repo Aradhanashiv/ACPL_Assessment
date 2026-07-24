@@ -4,7 +4,7 @@ const router = express.Router();
 
 const {
   getServices,
-} = require("../controllers/servicecontroller");
+} = require("../controllers/serviceController");
 
 router.get("/", getServices);
 
