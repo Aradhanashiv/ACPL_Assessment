@@ -9,14 +9,24 @@ const faqRoute = require("./routes/faq");
 
 const app = express();
 
-app.use(cors());
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://acpl-assessment.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use("/contact", contactRoute);
 app.use("/services", servicesRoute);
 app.use("/faq", faqRoute);
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 
 console.log(process.env.MONGO_URI);
 connectDB()
